@@ -5,7 +5,12 @@ class Config {
 
   Config._internal();
 
-  final String baseUrl = "https://b506-202-51-113-148.ngrok-free.app/api" ; 
+  // URL Backend
+  // Gunakan 10.0.2.2 untuk Android Emulator
+  // Gunakan localhost atau 127.0.0.1 untuk iOS Simulator / Web / Desktop
+  // Gunakan IP Address Laptop (misal 192.168.1.5) untuk Device Fisik
+  // Pastikan backend (Laravel/Node/dll) berjalan di port 8000
+  final String baseUrl = "http://192.168.18.201:8000/api";
 
   String formatCurrency(int value) {
     // Convert the number to a string and split it into the integer and decimal parts
@@ -23,5 +28,4 @@ class Config {
     }
     return 'Rp' + result;
   }
-
 }
